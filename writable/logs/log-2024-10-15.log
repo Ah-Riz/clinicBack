@@ -1,0 +1,26 @@
+CRITICAL - 2024-10-15 09:58:37 --> CodeIgniter\Exceptions\ConfigException: Invalid DBDriver name: "PostgreSQL"
+[Method: GET, Route: test-db/]
+in SYSTEMPATH/Database/Database.php on line 172.
+ 1 SYSTEMPATH/Database/Database.php(59): CodeIgniter\Database\Database->checkDbExtension('PostgreSQL')
+ 2 SYSTEMPATH/Database/Config.php(84): CodeIgniter\Database\Database->load([...], 'default')
+ 3 APPPATH/Controllers/TestController.php(12): CodeIgniter\Database\Config::connect()
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\TestController->index()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TestController))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/rewrite.php(44): require_once('/Applications/XAMPP/xamppfiles/htdocs/clinicBack/public/index.php')
+CRITICAL - 2024-10-15 09:59:59 --> CodeIgniter\Exceptions\ConfigException: Invalid DBDriver name: "PostgreSQL"
+[Method: GET, Route: test-db/]
+in SYSTEMPATH/Database/Database.php on line 172.
+ 1 SYSTEMPATH/Database/Database.php(59): CodeIgniter\Database\Database->checkDbExtension('PostgreSQL')
+ 2 SYSTEMPATH/Database/Config.php(84): CodeIgniter\Database\Database->load([...], 'default')
+ 3 APPPATH/Controllers/TestController.php(12): CodeIgniter\Database\Config::connect()
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\TestController->index()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TestController))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/rewrite.php(44): require_once('/Applications/XAMPP/xamppfiles/htdocs/clinicBack/public/index.php')
