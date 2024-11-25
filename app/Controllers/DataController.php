@@ -2,23 +2,34 @@
 
 namespace App\Controllers;
 
-use App\Models\DataModel;
 use CodeIgniter\RESTful\ResourceController;
 
 class DataController extends ResourceController
 {
-    protected $modelName = 'App\Models\DataModel';
-    protected $format = 'json';
+    protected $modelName = "App\Models\DataControllerModel";
+    protected $format = "json";
 
-    public function create()
+    public function __construct()
     {
-        $data = $this->request->getPost(); // Get POST data
-
-        if ($this->model->insert($data)) {
-            return $this->respondCreated(['status' => 'success', 'data' => $data]);
-        } else {
-            return $this->failValidationErrors($this->model->errors());
-        }
+        $this->model = new $this->modelName();
     }
-}
 
+    public function index()
+    {
+        return $this->respond($this->model->findAll());
+    }
+
+    // public function show($id = null)
+    // {
+    //     $record = $this->model->find($id);
+    //     if (!$record) {
+    //         # code...
+    //         return $this->failNotFound(sprintf(
+    //             'post with id %d not found',
+    //             $id
+    //         ));
+    //     }
+
+    //     return $this->respond($record);
+    // }
+}
